@@ -1,0 +1,32 @@
+{
+    "name": "heimrichhannot/contao-imagemapster",
+    "description":"Image maps for contao",
+    "keywords":["contao", "image", "image map", "area"],
+    "type": "contao-module",
+    "homepage":"https://github.com/heimrichhannot/contao-imagemapster",
+    "license":"LGPL-3.0+",
+    "authors":[
+        {
+            "name":"Heimrich & Hannot",
+            "email":"digitales@heimrich-hannot.de",
+            "homepage":"http://www.heimrich-hannot.de",
+            "role":"Developer"
+        }
+    ],
+    "support":{
+        "issues":"https://github.com/heimrichhannot/contao-imagemapster/issues"
+    },
+    "require": {
+        "contao/core": ">=3.2,<4-dev",
+    },
+    "autoload": {
+        "classmap": [""]
+    },
+    "extra": {
+        "contao": {
+            "sources": {
+                "": "system/modules/imagemapster"
+            }
+        }
+    }
+}
