@@ -12,12 +12,24 @@
 
 
 /**
+ * Register the namespaces
+ */
+ClassLoader::addNamespaces(array
+(
+	'HeimrichHannot',
+));
+
+
+/**
  * Register the classes
  */
 ClassLoader::addClasses(array
 (
-	'ImageMapster'       => 'system/modules/imagemapster/ImageMapster.php',
-	'ModuleImageMapster' => 'system/modules/imagemapster/ModuleImageMapster.php',
+	// Classes
+	'HeimrichHannot\Imagemapster\ImageMapster'       => 'system/modules/imagemapster/classes/ImageMapster.php',
+
+	// Modules
+	'HeimrichHannot\Imagemapster\ModuleImageMapster' => 'system/modules/imagemapster/modules/ModuleImageMapster.php',
 ));
 
 
@@ -26,14 +38,8 @@ ClassLoader::addClasses(array
  */
 TemplateLoader::addFiles(array
 (
-	'imagemapster_saxony'                    => 'system/modules/imagemapster/templates',
-	'imagemapster_saxony_big'                => 'system/modules/imagemapster/templates',
-	'imagemapster_saxony_big_profile'        => 'system/modules/imagemapster/templates',
-	'imagemapster_saxony_medium'             => 'system/modules/imagemapster/templates',
-	'imagemapster_saxony_medium_eventsearch' => 'system/modules/imagemapster/templates',
-	'imagemapster_saxony_profile'            => 'system/modules/imagemapster/templates',
-	'imagemapster_tnu_netzwerk'              => 'system/modules/imagemapster/templates',
-	'imagemapster_tnu_partner'               => 'system/modules/imagemapster/templates',
-	'imagemapster_tnu_regions'               => 'system/modules/imagemapster/templates',
-	'mod_imagemapster'                       => 'system/modules/imagemapster/templates',
+	'imagemapster_saxony'        => 'system/modules/imagemapster/templates/maps',
+	'imagemapster_saxony_big'    => 'system/modules/imagemapster/templates/maps',
+	'imagemapster_saxony_medium' => 'system/modules/imagemapster/templates/maps',
+	'mod_imagemapster'           => 'system/modules/imagemapster/templates/modules',
 ));

@@ -1,7 +1,9 @@
-<?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
+<?php
+
+namespace HeimrichHannot\Imagemapster;
 
 
-class ImageMapster extends Frontend
+class ImageMapster extends \Frontend
 {
 
 	protected $strTemplate = 'imagemapster_saxony';
@@ -21,7 +23,7 @@ class ImageMapster extends Frontend
 	public function parseMap()
 	{
 
-		$objT = new FrontendTemplate($this->strTemplate);
+		$objT = new \FrontendTemplate($this->strTemplate);
 
 		$objT->setData($GLOBALS['TL_LANG']['imagemapster']);
 

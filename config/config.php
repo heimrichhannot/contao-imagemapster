@@ -1,14 +1,15 @@
-<?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
+<?php
 
 
 /**
  * Front end modules
  */
-$GLOBALS['FE_MOD']['miscellaneous']['imagemapster'] = 'ModuleImageMapster';
+$GLOBALS['FE_MOD']['miscellaneous']['imagemapster'] = 'HeimrichHannot\Imagemapster\ModuleImageMapster';
 
 
-/**
- * jQLib HOOK (customize)
- */
-$GLOBALS['TL_JQUERY'][] = '/system/modules/imagemapster/html/jquery.imagemapster.js';
-$GLOBALS['TL_JQUERY'][] = '/system/modules/imagemapster/html/jquery.imagemapster-custom.js';
+if(TL_MODE == 'FE')
+{
+// 	$GLOBALS['TL_JAVASCRIPT']['rwdImageMaps'] = '/system/modules/imagemapster/assets/js/jquery.rwdImageMaps.js|static';
+	$GLOBALS['TL_JAVASCRIPT']['imagemapster'] = '/system/modules/imagemapster/assets/js/jquery.imagemapster.js|static';
+	$GLOBALS['TL_JAVASCRIPT']['imagemapster-custom'] = '/system/modules/imagemapster/assets/js/jquery.imagemapster-custom.js|static';
+}
